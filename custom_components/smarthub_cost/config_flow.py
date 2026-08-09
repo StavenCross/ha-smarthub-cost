@@ -78,7 +78,7 @@ class SmartHubCostConfigFlow(ConfigFlow, domain=DOMAIN):
                 vol.Required(CONF_SOURCE_STATISTIC_ID): selector.StatisticSelector(),
                 vol.Required(CONF_RATE, default=0.1228): selector.NumberSelector(
                     selector.NumberSelectorConfig(
-                        min=0, max=10, step=0.0001, mode=selector.NumberSelectorMode.BOX
+                        min=0, max=10, step="any", mode=selector.NumberSelectorMode.BOX
                     )
                 ),
                 vol.Required(
@@ -139,7 +139,7 @@ class SmartHubCostOptionsFlow(OptionsFlow):
             {
                 vol.Required(CONF_RATE, default=latest_rate): selector.NumberSelector(
                     selector.NumberSelectorConfig(
-                        min=0, max=10, step=0.0001, mode=selector.NumberSelectorMode.BOX
+                        min=0, max=10, step="any", mode=selector.NumberSelectorMode.BOX
                     )
                 ),
                 vol.Required(
