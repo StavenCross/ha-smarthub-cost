@@ -1,0 +1,37 @@
+{
+  "title": "SmartHub Cost",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Create hourly energy cost statistics",
+        "description": "Select the hourly SmartHub usage statistic. The rate is the variable energy charge per kWh; fixed monthly charges should remain separate.",
+        "data": {
+          "source_statistic_id": "Hourly energy statistic",
+          "rate": "Rate per kWh",
+          "effective_from": "Rate effective from",
+          "reprocess_days": "Correction window (days)"
+        }
+      }
+    },
+    "error": {
+      "source_not_found": "The selected statistic could not be found.",
+      "source_has_no_sum": "The selected statistic does not provide a cumulative sum."
+    },
+    "abort": {
+      "already_configured": "A cost calculation already exists for this statistic."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Add or correct a tariff period",
+        "description": "A date that already exists is replaced; a new date preserves prior rates. Saving rebuilds the retained cost history.",
+        "data": {
+          "rate": "Rate per kWh",
+          "effective_from": "Rate effective from",
+          "reprocess_days": "Correction window (days)"
+        }
+      }
+    }
+  }
+}

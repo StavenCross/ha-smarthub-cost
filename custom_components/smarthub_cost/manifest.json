@@ -1,0 +1,12 @@
+{
+  "domain": "smarthub_cost",
+  "name": "SmartHub Cost",
+  "codeowners": ["@StavenCross"],
+  "config_flow": true,
+  "dependencies": ["recorder"],
+  "documentation": "https://github.com/stavencross/ha-smarthub-cost",
+  "integration_type": "service",
+  "iot_class": "calculated",
+  "issue_tracker": "https://github.com/stavencross/ha-smarthub-cost/issues",
+  "version": "0.1.0"
+}
